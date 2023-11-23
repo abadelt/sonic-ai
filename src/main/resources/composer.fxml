@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" spacing="5" alignment="TOP_CENTER" fx:controller="it.badelt.sonicai.ui.ComposerController">
+    <padding><Insets top="20" right="10" bottom="10" left="10"/></padding>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <Button text="Record Description" fx:id="recordButton"/>
+    </HBox>
+
+    <TextArea fx:id="description" prefRowCount="4" promptText="... or enter a description manually for the tune you'd like to hear."/>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <padding><Insets top="0" right="10" bottom="15" left="10"/></padding>
+        <Button text="Create" fx:id="submitDescriptionButton"/>
+    </HBox>
+
+    <TextArea fx:id="sonicCode" prefRowCount="40" promptText="Model output goes into here and can be sent to sonci-pi (Play) or refined by adding text and resubmitting it to the language model."/>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <padding><Insets top="0" right="10" bottom="15" left="10"/></padding>
+        <Button text="Refine" fx:id="resubmitToLMButton"/>
+        <Button text="Play" fx:id="playButton"/>
+    </HBox>
+
+</VBox>
